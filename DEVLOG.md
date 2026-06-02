@@ -39,6 +39,7 @@
 - Added API Endpoints for Employees (GET all, GET single)
 - Made a Data Model for Employees.
 - Made an Employee Factory which generates fake employee data.
+- All API endpoints for Companies and Employees are fully implemented (GET, POST, PUT, DELETE)
 
 ### Files added/changed:
 - __*Data*__
@@ -62,3 +63,12 @@
 - __*Models*__
     - Employee.cs
 - Program.cs
+
+### Next Steps
+- Setup initial Frontend
+- create forms to consume API (POST, PUT)
+- Create Views for Companies and Employees
+
+## 03/06/2026 - Wednesday
+
+### Notes

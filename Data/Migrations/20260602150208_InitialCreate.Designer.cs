@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CompanyAdminPanel.Data.Migrations
 {
     [DbContext(typeof(CompanyAdminPanelContext))]
-    [Migration("20260602125223_InitialCreate")]
+    [Migration("20260602150208_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -48,7 +48,7 @@ namespace CompanyAdminPanel.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("CompanyId")
+                    b.Property<int>("CompanyId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Email")
@@ -74,7 +74,9 @@ namespace CompanyAdminPanel.Data.Migrations
                 {
                     b.HasOne("CompanyAdminPanel.Models.Company", "Company")
                         .WithMany()
-                        .HasForeignKey("CompanyId");
+                        .HasForeignKey("CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Company");
                 });

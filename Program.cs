@@ -9,6 +9,8 @@ builder.Services.AddSqlite<CompanyAdminPanelContext>(connString);
 
 var app = builder.Build();
 
+
+
 app.MigrateDb();
 app.SeedCompanies(10);
 

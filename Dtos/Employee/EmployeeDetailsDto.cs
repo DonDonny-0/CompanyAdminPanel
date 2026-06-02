@@ -6,7 +6,7 @@ public record class EmployeeDetailsDto
     int Id,
     string FirstName,
     string LastName,
-    Company Company,
+    int CompanyId,
     string Email,
     int Phone   
 );

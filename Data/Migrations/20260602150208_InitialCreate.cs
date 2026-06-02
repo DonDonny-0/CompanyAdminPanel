@@ -34,7 +34,7 @@ namespace CompanyAdminPanel.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     FirstName = table.Column<string>(type: "TEXT", nullable: true),
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
-                    CompanyId = table.Column<int>(type: "INTEGER", nullable: true),
+                    CompanyId = table.Column<int>(type: "INTEGER", nullable: false),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
                     Phone = table.Column<int>(type: "INTEGER", nullable: false)
                 },
@@ -45,7 +45,8 @@ namespace CompanyAdminPanel.Data.Migrations
                         name: "FK_Employees_Companies_CompanyId",
                         column: x => x.CompanyId,
                         principalTable: "Companies",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

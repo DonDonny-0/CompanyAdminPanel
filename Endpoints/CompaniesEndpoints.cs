@@ -2,7 +2,7 @@ namespace CompanyAdminPanel.Endpoints;
 
 using CompanyAdminPanel.Data;
 using CompanyAdminPanel.Dtos.Company;
-// using CompanyAdminPanel.Models;
+using CompanyAdminPanel.Models;
 using Microsoft.EntityFrameworkCore;
 
 public static class CompaniesEndpoints
@@ -37,5 +37,56 @@ public static class CompaniesEndpoints
                 )
             );
         }).WithName(EndpointName);
+
+        group.MapPost("/", async (CreateCompanyDto newCompany, CompanyAdminPanelContext dbContext) =>
+        {
+            Company company = new()
+            {
+                Name = newCompany.Name,
+                Email = newCompany.Email,
+                Logo = newCompany.Logo,
+                Website = newCompany.Website,
+            };
+
+            dbContext.Companies.Add(company);
+            await dbContext.SaveChangesAsync();
+
+            CompanyDetailsDto companyDto = new (
+                company.Id,
+                company.Name,
+                company.Email,
+                company.Logo,
+                company.Website
+            );
+
+            return Results.CreatedAtRoute(EndpointName, new {id = companyDto.Id}, companyDto);
+        }).WithName("CreateCompany");
+
+        group.MapPut("/{id}", async (int id, UpdateCompanyDto updatedCompany, CompanyAdminPanelContext dbContext) => {
+            
+            var existingCompany = await dbContext.Companies.FindAsync(id);
+
+            if (existingCompany is null)
+            {
+                return Results.NotFound();
+            }
+
+            existingCompany.Name = updatedCompany.Name;
+            existingCompany.Email = updatedCompany.Email;
+            existingCompany.Logo = updatedCompany.Logo;
+            existingCompany.Website = updatedCompany.Website;
+
+            await dbContext.SaveChangesAsync();
+
+            return Results.NoContent();
+        }).WithName("UpdateCompany");
+
+        group.MapDelete("/{id}", async (int id, CompanyAdminPanelContext dbContext) =>
+        {
+            await dbContext.Companies.Where(company => company.Id == id)
+                .ExecuteDeleteAsync();
+
+            return Results.NoContent();
+        });
     }
 }

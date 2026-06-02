@@ -4,7 +4,7 @@ public record class UpdateEmployeeDto
 (
     string FirstName,
     string LastName,
-    string Company,
+    int CompanyId,
     string Email,
     int Phone   
 );

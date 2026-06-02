@@ -1,10 +1,12 @@
 namespace CompanyAdminPanel.Dtos.Employee;
 
+using CompanyAdminPanel.Models;
+
 public record class CreateEmployeeDto
 (
     string FirstName,
     string LastName,
-    string Company,
+    int CompanyId,
     string Email,
     int Phone  
 );
