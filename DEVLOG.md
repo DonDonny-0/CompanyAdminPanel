@@ -32,3 +32,33 @@
 - API Testing
 
 ## 02/06/2026 - Tuesday
+
+### Notes
+- Added Dtos for all employee requests
+- Organised Employee and Company Dtos into directories
+- Added API Endpoints for Employees (GET all, GET single)
+- Made a Data Model for Employees.
+- Made an Employee Factory which generates fake employee data.
+
+### Files added/changed:
+- __*Data*__
+    - __*Factories*__
+        - Employeeactory.cs
+    - CompanyAdminPanelContext.cs
+    - DataExtensions.cs
+- __*Dtos*__
+    - __*Company*__
+        - CompanyDetailsDto.cs
+        - CreateCompanyDto.cs
+        - UpdateCompanyDto.cs
+        - CompanyDto.cs
+    - __*Employee*__
+        - EmployeeDetailsDto.cs
+        - CreateEmployeeDto.cs
+        - UpdateEmployeeDto.cs
+        - EmployeeDto.cs
+- __*Endpoints*__
+    - EmployeeEndpoints.cs
+- __*Models*__
+    - Employee.cs
+- Program.cs

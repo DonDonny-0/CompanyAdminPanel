@@ -12,7 +12,7 @@ public static class DataExtensions
         dbContext.Database.Migrate();
     }
 
-    public static void SeedCompanies(this WebApplication app, int count = 10)
+    public async static void SeedCompanies(this WebApplication app, int count = 10)
     {
         using var scope = app.Services.CreateScope();
         var dbContext = scope.ServiceProvider.GetRequiredService<CompanyAdminPanelContext>();
@@ -22,8 +22,12 @@ public static class DataExtensions
             return;
         }
 
-        var companies = CompanyFactory.GenerateCompanyData(count).ToArray();
+        var companies = CompanyFactory.GenerateCompanyData(10).ToList();
+        var employees = EmployeeFactory.GenerateEmployeeData(companies);
+
+        // Then add to your database context
         dbContext.Companies.AddRange(companies);
-        dbContext.SaveChanges();
+        dbContext.Employees.AddRange(employees);
+        await dbContext.SaveChangesAsync();
     }
 }

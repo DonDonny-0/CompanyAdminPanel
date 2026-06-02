@@ -1,6 +1,6 @@
-namespace CompanyAdminPanel.Dtos;
+namespace CompanyAdminPanel.Dtos.Company;
 
-public record class CompanyDto
+public record class CompanyDetailsDto
 (
     int Id,
     string Name,

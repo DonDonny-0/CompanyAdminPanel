@@ -1,11 +1,11 @@
 namespace CompanyAdminPanel.Endpoints;
 
 using CompanyAdminPanel.Data;
-using CompanyAdminPanel.Dtos;
+using CompanyAdminPanel.Dtos.Company;
 // using CompanyAdminPanel.Models;
 using Microsoft.EntityFrameworkCore;
 
-public static class Endpoints
+public static class CompaniesEndpoints
 {
     const string EndpointName = "GetCompany";
 

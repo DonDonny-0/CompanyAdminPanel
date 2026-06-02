@@ -13,6 +13,7 @@ app.MigrateDb();
 app.SeedCompanies(10);
 
 app.MapCompanyEndpoints();
+app.MapEmployeeEndpoints();
 
 app.MapGet("/", () => "Hello World!");
 

@@ -1,4 +1,4 @@
-namespace CompanyAdminPanel.Dtos;
+namespace CompanyAdminPanel.Dtos.Company;
 
 public record class CreateCompanyDto
 (
