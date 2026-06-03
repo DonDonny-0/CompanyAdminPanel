@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zziCsEzFeG4=",
+  "dgSpecHash": "7lS0Kae/qvE=",
   "success": true,
-  "projectFilePath": "/home/brandon/Development/CompanyAdminPanel/CompanyAdminPanel.csproj",
+  "projectFilePath": "/home/brandon/Development/CompanyAdminPanel/CompanyAdminPanel.Api/CompanyAdminPanel.csproj",
   "expectedPackageFiles": [
     "/home/brandon/.nuget/packages/bogus/35.6.5/bogus.35.6.5.nupkg.sha512",
     "/home/brandon/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

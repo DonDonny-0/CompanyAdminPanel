@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompanyAdminPanel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c0eda915f3968fe702d8b3610470efe902ea3c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e51687c31a512d1b01803c3c2394c99da363ce64")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompanyAdminPanel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompanyAdminPanel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2439,11 +2439,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/brandon/Development/CompanyAdminPanel/CompanyAdminPanel.csproj",
+      "projectUniqueName": "/home/brandon/Development/CompanyAdminPanel/CompanyAdminPanel.Api/CompanyAdminPanel.csproj",
       "projectName": "CompanyAdminPanel",
-      "projectPath": "/home/brandon/Development/CompanyAdminPanel/CompanyAdminPanel.csproj",
+      "projectPath": "/home/brandon/Development/CompanyAdminPanel/CompanyAdminPanel.Api/CompanyAdminPanel.csproj",
       "packagesPath": "/home/brandon/.nuget/packages/",
-      "outputPath": "/home/brandon/Development/CompanyAdminPanel/obj/",
+      "outputPath": "/home/brandon/Development/CompanyAdminPanel/CompanyAdminPanel.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/brandon/.nuget/NuGet/NuGet.Config"
